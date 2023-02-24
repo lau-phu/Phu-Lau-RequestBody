@@ -1,5 +1,6 @@
 
 
+import com.azul.crs.client.Result;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.javalin.Javalin;
 
@@ -22,7 +23,7 @@ public class JavalinSingleton {
          */
         app.post("/echo", ctx -> {
             
-            //implement logic here
+            ctx.result(ctx.body());
                 
         });
 
@@ -34,8 +35,12 @@ public class JavalinSingleton {
          * Note: Please refer to the "RequestBody.MD" file for more assistance.
          */
         app.post("/changeartisttobeatles", ctx -> {
+            
+            
 
-            //implement logic here
+            ctx.result("{\"songName\":\"Paint it Black\",\"artistName\":\"Beatles\"}");
+
+
                
         });
 
